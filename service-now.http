@@ -1,0 +1,43 @@
+@servicenowEndpoint = https://<your-endpoint>.service-now.com
+@servicenowUser = <your-admin-user>
+@servicenowPassword = <your-admin-password>
+
+### get a specific servicenow incident
+GET {{servicenowEndpoint}}/api/now/table/incident?number=INC0008111
+Content-Type: application/json
+Authorization: Basic {{servicenowUser}}:{{servicenowPassword}}
+
+### get a specific servicenow incident - specific fields
+GET {{servicenowEndpoint}}/api/now/table/incident?number=INC0008111&sysparm_fields=number,short_description,sys_updated_on
+Content-Type: application/json
+Authorization: Basic {{servicenowUser}}:{{servicenowPassword}}
+
+### create a new incident
+POST {{servicenowEndpoint}}/api/now/table/incident
+Content-Type: application/json
+Authorization : Basic {{servicenowUser}}:{{servicenowPassword}}
+
+{
+  "short_description": "API test incident",
+  "description": "This is a test incident created via API"
+}
+
+### get a newly created servicenow incident - specific fields
+GET {{servicenowEndpoint}}/api/now/table/incident?number=INC0010001&sysparm_fields=number,short_description,sys_updated_on,sys_id
+Content-Type: application/json
+Authorization: Basic {{servicenowUser}}:{{servicenowPassword}}
+
+### update a servicenow incident
+PUT {{servicenowEndpoint}}/api/now/table/incident/120bf8bf47d702105222eee3716d43fa
+Content-Type: application/json
+Authorization: Basic {{servicenowUser}}:{{servicenowPassword}}
+
+{
+  "short_description": "API test incident - updated",
+  "description": "This is a test incident created via API and updated"
+}
+
+### knowledge base search
+GET {{servicenowEndpoint}}/api/now/table/kb_knowledge?sysparm_limit=10&sysparm_fields=short_description,sys_id
+Content-Type: application/json
+Authorization: Basic {{servicenowUser}}:{{servicenowPassword}}
