@@ -1,6 +1,6 @@
-@servicenowEndpoint = https://<your-endpoint>.service-now.com
-@servicenowUser = <your-admin-user>
-@servicenowPassword = <your-admin-password>
+@servicenowEndpoint = https://<your-dev-env>>.service-now.com
+@servicenowUser = <your-admin-username>
+@servicenowPassword = <your-password>
 
 ### get a specific servicenow incident
 GET {{servicenowEndpoint}}/api/now/table/incident?number=INC0008111
