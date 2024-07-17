@@ -6,4 +6,4 @@ ServiceNow has a REST API and some details of this can be found [here](https://d
 
 This repo will use this together with a ServiceNow demo instance to show how an OpenAI chat application can directly interact with ServiceNow APIs.
 
-Later on this will be refactored to use {LangChain](https://python.langchain.com/v0.1/docs/get_started/introduction) and/or [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/).
+Later on this will be refactored to use [LangChain](https://python.langchain.com/v0.1/docs/get_started/introduction) and/or [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/overview/).
