@@ -10,3 +10,5 @@ Later on this will be refactored to use [LangChain](https://python.langchain.com
 
 ## Sample Code
 In this repo, the [sample code](./openai-function-calling.ipynb) will be presented as a [Jupyter notebook](https://jupyter.org/) so this can be tried interactively.
+
+You can also experiment with the ServiceNow REST interface directly using the REST client extension in Visual Studio Code. Some samples are in [service-now.http](./service-now.http).
